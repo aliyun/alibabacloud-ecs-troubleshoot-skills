@@ -45,7 +45,7 @@ aliyun ecs CreateDiagnosticReport \
 
 ## Step 2：轮询报告状态
 
-诊断通常在 **30 秒~2 分钟** 内完成。建议首次等待 ~20 秒后查询，仍为 `InProgress` 再隔 10~20 秒重试。**使用 `DescribeDiagnosticReportAttributes`** 查看诊断报告，它会返回所有指标项（`MetricResults`）的逐项结果与每个 Issue 的 `Additional` 上下文，便于做 Issue 级深读。
+诊断通常在 **30 秒~2 分钟** 内完成。建议首次等待 20 秒后查询，仍为 `InProgress` 再隔 10~20 秒重试。**使用 `DescribeDiagnosticReportAttributes`** 查看诊断报告，它会返回所有指标项（`MetricResults`）的逐项结果与每个 Issue 的 `Additional` 上下文，便于做 Issue 级深读。
 
 ```bash
 aliyun ecs DescribeDiagnosticReportAttributes \
