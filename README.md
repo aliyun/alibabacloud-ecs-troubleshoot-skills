@@ -11,14 +11,16 @@
 | Skill | 路径 | 适用场景 |
 | --- | --- | --- |
 | `alibabacloud-ecs-linux-troubleshooting` | [`skills/alibabacloud-ecs-linux-troubleshooting/SKILL.md`](skills/alibabacloud-ecs-linux-troubleshooting/SKILL.md) | 阿里云 ECS Linux 实例的异常问题排查：无法启动、SSH/VNC 登录失败、网络不通/丢包/延迟、磁盘与文件系统异常、性能异常、宕机夯机、时钟跳变、配置不生效等。 |
+| `alibabacloud-ecs-windows-online-troubleshooting` | [`skills/alibabacloud-ecs-windows-online-troubleshooting/SKILL.md`](skills/alibabacloud-ecs-windows-online-troubleshooting/SKILL.md) | 阿里云 ECS Windows 实例的在线问题排查：网络（ping/DNS/DHCP/防火墙/SMB）、RDP 远程桌面（连接失败/认证/黑屏/卡顿）、存储/磁盘、系统激活、Windows Update、性能问题、用户账户/权限、驱动、应用崩溃、安全/证书/TLS、计划任务等。 |
 
 ## 依赖
 
-- [aliyun CLI](https://github.com/aliyun/aliyun-cli)：所有 Skill 均依赖 aliyun CLI 完成对目标 ECS 实例的远程诊断与数据采集。请先安装并完成凭证配置（`aliyun configure`），确保具备目标实例所在账号下的相应只读/诊断权限。
+- [aliyun CLI](https://github.com/aliyun/aliyun-cli)（For Linux Skills）：Linux 排查技能依赖 aliyun CLI 完成对目标 ECS 实例的远程诊断与数据采集。请先安装并完成凭证配置（`aliyun configure`），确保具备目标实例所在账号下的相应只读/诊断权限。
+
 
 ## 安装
 
-1. 安装 aliyun CLI：参考 [aliyun/aliyun-cli](https://github.com/aliyun/aliyun-cli) 的安装文档，安装完成后执行：
+1. 【对于 Linux 相关 Skills】安装 aliyun CLI：参考 [aliyun/aliyun-cli](https://github.com/aliyun/aliyun-cli) 的安装文档，安装完成后执行：
 
    ```bash
    aliyun configure
